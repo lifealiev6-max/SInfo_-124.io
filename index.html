@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="tj">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SchoolInfo_№124</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      
+   <div id="www"> 
+        <button popovertarget="modal"><b>S-info_№124</b></button>
+    </div>
+  <div id="modal" popover>
+     <button popovertarget="modal">❌</button>
+     <p><img src="pop/School124.png" width="300px"><br><mark>Барномаи <b>S-info_№124</b> Бо<br>дастгирии Муаллимони информатика <br>сохта шуда! <br> Ин барнома 6-қисми асоси <br> додар бо номи <br>(Асос Хабарҳо Хонандагон <br> Омӯзгорон Галерея Тамос) <br>дорад ва ҳар яке аз ин менюҳо кор ва <br> вазифаи худашонро меукнанд!</mark></p>
+  </div>
+
+     <nav class="nav">
+        <a href="#home">Асос</a>
+        <a href="#news">Хабар</a>
+        <a href="#students">Хонандагон</a>
+        <a href="#teachers">Омӯзгорон</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Тамос</a>
+     </nav>
+      <button id="adminBtn" class="btn small">Admin</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Хона -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>Хуш омадед ба М.Т.М-у №124✨</h1>
+        <p>ноҳияи Фирдавсӣ.</p>
+      </div>
+    </section>
+
+    <!-- Ахбор -->
+    <section id="news" class="container section">
+      <h2>Хабарҳо</h2>
+      <div id="newsList" class="list">
+        <div class="item">
+          <h3>Оғози соли таҳсил</h3>
+          <p>Соли нави таҳсил бо маросими кушод оғоз гардид.</p>
+          <small>17.01.2026</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Хонандагон -->
+    <section id="students" class="container section">
+      <h2>Хонандагон</h2>
+      <div id="studentsList" class="cards">
+        <div class="card"><strong></strong><p></p></div>
+      </div>
+    </section>
+
+    <!-- Омӯзгорон -->
+    <section id="teachers" class="container section">
+      <h2>Омӯзгорон</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="/pop/durector.png" width="300px" />
+          <h3><u style="color: red;">Зарифов О.</u></h3>
+          <p>Директори Муассиса,ва Муаллими фанни Алгабра ва Гмт</p>
+        </div>
+        <div class="card">
+          <img src="/pop/Iscandar.png" alt="AL" />
+          <h3>Ҳоҷиев И.</h3>
+          <p>Фан: Муовин ва Муаллими тхт т-умуми</p>
+        </div>
+        <div class="card">
+          <img src="/pop/flower.png" alt="AL" />
+          <h3>Ҳусейнова М.</h3>
+          <p>Фан: Муовин ва Муаллимиа Аглиси</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="container section">
+      <h2>Галерея</h2>
+      <div id="galleryGrid" class="gallery">
+        <img src="/pop/image.png" >
+        <img src="/pop/class.png">
+        <img src="/pop/class2.png">
+      </div>
+    </section>
+
+    <!-- Тамос -->
+    <section id="contact" class="container section">
+      <h2>Тамос</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label>Ном<input type="text" id="cname" required /></label>
+        <label>Почта<input type="email" id="cemail" required /></label>
+        <label>Паём<textarea id="cmessage" rows="4" required></textarea></label>
+        <button type="submit" class="btn">Фиристодан</button>
+        <span id="contactStatus" class="status"></span>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span>Муассисаи №124. Ҳама ҳуқуқҳо ҳифз шудаанд.</a></p>
+    </div>
+  </footer>
+
+  <!-- Admin Modal -->
+  <div id="adminModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="adminClose">✕</button>
+      <h3>Панели Admin</h3>
+
+      <div id="loginBox">
+        <label>Парол<input type="password" id="adminPass" /></label>
+        <button id="loginBtn" class="btn">Вуруд</button>
+        <p class="muted">Парол: <strong>****</strong></p>
+      </div>
+
+      <div id="adminPanel" style="display:none">
+        <!-- Иловаи хабар -->
+        <h4>Иловаи хабар</h4>
+        <input id="nTitle" placeholder="Сарлавҳа" />
+        <textarea id="nBody" placeholder="Мазмун"></textarea>
+        <button id="addNews" class="btn">Илова кардан</button>
+        <button id="clearNews" class="btn small">Пок кардани ҳамаи хабарҳо</button>
+
+        <!-- Иловаи хонанда -->
+        <h4>Иловаи хонанда</h4>
+        <input id="sName" placeholder="Ном" />
+        <input id="sClass" placeholder="Синф" />
+        <button id="addStudent" class="btn">Илова кардан</button>
+
+        <hr />
+        <button id="logoutBtn" class="btn small">Баромадан</button>
+      </div>
+    </div>
+  </div>
+    <!-- Файли овозро дар проектат гузор -->
+<audio id="notifySound" src="/pop/new-notification-09-352705.mp3" preload="auto"></audio>
+
+  <script src="home.js"></script>
+</body>
+</html>
